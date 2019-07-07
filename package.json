@@ -1,0 +1,22 @@
+{
+  "name": "jpacman-map-maker",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "eslint **/*.js && mocha",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "Ricardo Vogel",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
+}

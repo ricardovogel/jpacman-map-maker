@@ -1,0 +1,31 @@
+.map-table {
+    display: table;
+    border-collapse: collapse;
+}
+
+.map-table .map-row {
+    display: table-row;
+}
+
+.map-table .map-cell {
+    display: table-cell;
+}
+
+.cell-image {
+    display: block;
+    width: 30px;
+}
+
+.cell-button {
+    display: block;
+    width: 50px;
+}
+.selected-image {
+    margin-right: 4px;
+    border: 5px solid red;
+
+    box-sizing: border-box;
+}
+.notselected-image {
+    margin-right: 4px;
+}

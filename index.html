@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>JPacman Map Generator</title>
+    <meta name="description" content="A Map Generator for JPacman">
+    <meta name="author" content="Ricardo Vogel">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="map-table">
+            <div class="map-row" v-for="row in map">
+                <div class="map-cell" v-for="cell in row">
+                    <img class="cell-image" v-on:click="switchToSelected(cell)" v-bind:src="cell.sprite.image">
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="map-table">
+            <div class="map-row">
+                <div class="map-cell" v-for="sprite in sprites">
+                    <img v-if="sprite.selected" class="cell-button selected-image" v-bind:src="sprite.image">
+                    <img v-else class="cell-button notselected-image" v-on:click="select(sprite)"
+                        v-bind:src="sprite.image">
+                </div>
+            </div>
+        </div>
+
+        <button v-on:click="generateAndDownload()">generate and download</button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="src/saveFile.js"></script>
+    <script src="src/square.js"></script>
+    <script src="src/map.js"></script>
+    <script src="src/index.js"></script>
+</body>
+
+</html>
