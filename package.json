@@ -4,8 +4,10 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "eslint **/*.js && mocha",
-    "build": "webpack"
+    "eslint": "eslint **/*.js",
+    "test": "mocha && eslint **/*.js",
+    "devbuild": "mocha && webpack",
+    "build": "mocha && eslint **/*.js && webpack"
   },
   "keywords": [],
   "author": "Ricardo Vogel",
