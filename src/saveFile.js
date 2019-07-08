@@ -1,4 +1,4 @@
-function download (filename, text) {
+module.exports.download = (filename, text) => {
   var element = document.createElement('a')
   element.setAttribute(
     'href',
