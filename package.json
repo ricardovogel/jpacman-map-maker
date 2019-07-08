@@ -13,7 +13,7 @@
   "author": "Ricardo Vogel",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^6.0.1",
+    "eslint": "^5.0.0",
     "eslint-plugin-vue": "^5.2.3",
     "mocha": "^6.1.4",
     "webpack": "^4.35.2",
