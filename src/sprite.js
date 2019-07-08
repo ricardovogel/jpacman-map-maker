@@ -14,7 +14,7 @@ module.exports = class Sprite {
     this.selected = false
   }
 
-  static select (spriteToSelect, listOfSprites) {
+  static selectSprite (spriteToSelect, listOfSprites) {
     listOfSprites.forEach(el => el.deselect())
     spriteToSelect.select()
     return spriteToSelect

@@ -25,7 +25,7 @@ switchToSelected = square => {
 
 // eslint-disable-next-line no-undef
 select = sprite => {
-  Sprite.select(sprite, app.map.sprites)
+  Sprite.selectSprite(sprite, app.map.sprites)
 }
 
 // eslint-disable-next-line no-undef
