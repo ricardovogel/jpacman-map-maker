@@ -1,4 +1,5 @@
 var Square = require('./square')
+
 module.exports = class Map {
   constructor (width, height, sprites) {
     this.width = width
@@ -31,5 +32,34 @@ module.exports = class Map {
     }
 
     return map
+  }
+
+  importMapWithText (text) {
+    text = text.replace(/(\r\n|\n|\r)/gm, '')
+    if (text.length !== 483) {
+      throw 'incorrectMap'
+    }
+    let spritesLetters = ''
+    this.sprites.forEach(x => {
+      spritesLetters += x.character
+    })
+    if (
+      text.split('').filter(x => {
+        return spritesLetters.includes(x)
+      }).length !== 483
+    ) {
+      throw 'incorrectMap'
+    }
+
+    for (let i = 0; i !== this.height; i++) {
+      for (let j = 0; j !== this.width; j++) {
+        var thisChar = text.charAt(i * this.width + j)
+
+        var thisSprite = this.sprites.find(x => {
+          return x.character === thisChar
+        })
+        this.map[i][j].switchTo(thisSprite)
+      }
+    }
   }
 }

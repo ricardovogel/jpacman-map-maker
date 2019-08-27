@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>JPacman Map Generator</title>
+    <meta name="description" content="A Map Generator for JPacman">
+    <meta name="author" content="Ricardo Vogel">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+            <a class="navbar-brand" href="#">JPacman Map Generator</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" v-for="sprite in map.sprites">
+                        <img v-if="sprite.selected" class="cell-button selected-image" v-bind:src="sprite.image">
+                        <img v-else class="cell-button notselected-image" v-on:click="select(sprite)"
+                            v-bind:src="sprite.image">
+                    </li>
+                </ul>
+                <div class="mt-2 mt-md-0">
+                    <button type="button" class="btn btn-secondary" v-on:click="openFile()">
+                        Open map
+                    </button>
+                    <button type="button" class="btn btn-secondary" v-on:click="generateAndDownload()">
+                        Generate and Download
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- map -->
+        <div class="container map-container">
+            <div class="map-table">
+                <div class="map-row" v-for="row in map.map">
+                    <div class="map-cell" v-for="cell in row">
+                        <img class="cell-image" v-on:click="switchToSelected(cell)" v-bind:src="cell.sprite.image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+    </div>
+    <script src="js/main.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="src/saveFile.js"></script>
+    <script src="src/square.js"></script>
+    <script src="src/map.js"></script>
+    <script src="src/index.js"></script> -->
+</body>
+
+</html>

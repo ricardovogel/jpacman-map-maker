@@ -1,4 +1,5 @@
 var DownloadFile = require('./saveFile')
+var OpenFile = require('./openFile')
 var Map = require('./map')
 var Sprite = require('./sprite')
 var Vue = require('vue')
@@ -31,4 +32,9 @@ select = sprite => {
 // eslint-disable-next-line no-undef
 generateAndDownload = () => {
   DownloadFile.download('map.txt', app.map.generateText())
+}
+
+// eslint-disable-next-line no-undef
+openFile = () => {
+  OpenFile.openFile(app)
 }
