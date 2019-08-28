@@ -46,7 +46,7 @@
         <div class="container map-container">
             <div class="map-table">
                 <div class="map-row" v-for="row in map.map">
-                    <div class="map-cell" v-for="cell in row">
+                    <div class="map-cell" v-for="cell in row" v-bind:id="cell.id">
                         <img class="cell-image" v-on:click="switchToSelected(cell)" v-bind:src="cell.sprite.image">
                     </div>
                 </div>

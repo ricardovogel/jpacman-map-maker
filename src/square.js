@@ -3,6 +3,7 @@ module.exports = class Square {
     this.width = width
     this.height = height
     this.sprite = defaultSprite
+    this.id = `${height},${width}`
   }
 
   switchTo (spriteToSwitchTo) {
