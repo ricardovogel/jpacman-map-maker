@@ -4,17 +4,13 @@
   "description": "",
   "private": true,
   "scripts": {
-    "eslint": "eslint **/*.js",
-    "test": "mocha && eslint **/*.js",
-    "devbuild": "mocha && webpack",
-    "build": "mocha && eslint **/*.js && webpack"
+    "test": "mocha",
+    "build": "mocha && webpack"
   },
   "keywords": [],
   "author": "Ricardo Vogel",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^5.0.0",
-    "eslint-plugin-vue": "^5.2.3",
     "mocha": "^6.1.4",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5"
