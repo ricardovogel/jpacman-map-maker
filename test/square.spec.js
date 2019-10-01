@@ -4,7 +4,7 @@ var assert = require('assert')
 var Square = require('../src/square')
 var Sprite = require('../src/sprite')
 
-describe('Sprite test', () => {
+describe('Square test', () => {
   var sprite
   var square
   beforeEach(() => {
