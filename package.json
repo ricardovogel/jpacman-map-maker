@@ -5,12 +5,15 @@
   "private": true,
   "scripts": {
     "test": "mocha",
-    "build": "mocha && webpack"
+    "build": "mocha && webpack",
+    "cypress": "mocha && webpack && cypress open",
+    "cypress-run": "mocha && webpack && cypress run"
   },
   "keywords": [],
   "author": "Ricardo Vogel",
   "license": "ISC",
   "devDependencies": {
+    "cypress": "^3.6.1",
     "mocha": "^6.1.4",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5"

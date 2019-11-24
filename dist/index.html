@@ -25,17 +25,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item" v-for="sprite in map.sprites">
+                    <li class="nav-item" v-bind:id="sprite.id" v-for="sprite in map.sprites">
                         <img v-if="sprite.selected" class="cell-button selected-image" v-bind:src="sprite.image">
                         <img v-else class="cell-button notselected-image" v-on:click="select(sprite)"
                             v-bind:src="sprite.image">
                     </li>
                 </ul>
                 <div class="mt-2 mt-md-0">
-                    <button type="button" class="btn btn-secondary" v-on:click="openFile()">
+                    <button type="button" id="open-map" class="btn btn-secondary" v-on:click="openFile()">
                         Open map
                     </button>
-                    <button type="button" class="btn btn-secondary" v-on:click="generateAndDownload()">
+                    <button type="button" id="generate-and-download" class="btn btn-secondary"
+                        v-on:click="generateAndDownload()">
                         Generate and Download
                     </button>
                 </div>
