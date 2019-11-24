@@ -1,17 +1,12 @@
-name: Cypress tests
+name: Cypress
 on: [push]
 jobs:
   cypress-run:
-    name: Cypress run
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v1
-        with:
-          record: true
-        env:
-          # pass the Dashboard record key as an environment variable
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
