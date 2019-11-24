@@ -7,7 +7,7 @@
     "test": "mocha",
     "build": "mocha && webpack",
     "cypress": "mocha && webpack && cypress open",
-    "cypress-run": "mocha && webpack && cypress run --record --key f334a6d0-9588-42e0-abe4-1d3b3c0b9568"
+    "cypress-run": "mocha && webpack && cypress run"
   },
   "keywords": [],
   "author": "Ricardo Vogel",
