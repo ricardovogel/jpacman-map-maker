@@ -129,14 +129,14 @@ var app = new Vue({
       new Sprite(2, '.', 'pellet'),
       new Sprite(3, 'P', 'pacman'),
       new Sprite(4, 'G', 'ghost'),
-      new Sprite(5, 'B', 'bell'),
-      new Sprite(6, 'C', 'cherry'),
-      new Sprite(7, 'E', 'energizer'),
+      new Sprite(5, 'A', 'apple'),
+      new Sprite(6, 'B', 'bell'),
+      new Sprite(7, 'C', 'cherry'),
       new Sprite(8, 'K', 'key'),
       new Sprite(9, 'M', 'melon'),
       new Sprite(10, 'O', 'orange'),
       new Sprite(11, 'S', 'strawberry'),
-      new Sprite(12, 'A', 'apple')
+      new Sprite(12, 'E', 'energizer')
     ])
   }
 })
