@@ -13,7 +13,7 @@
   "author": "Ricardo Vogel",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^3.6.1",
+    "cypress": "^10.9.0",
     "mocha": "^6.1.4",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5"
