@@ -16,7 +16,7 @@
     "cypress": "^3.6.1",
     "mocha": "^6.1.4",
     "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "sweetalert2": "^8.15.2",
